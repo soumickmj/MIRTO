@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>MIRTO: a registration-gated, multiverse-tested evaluation protocol for unsupervised anomaly segmentation</title>
+  <meta name="title" content="MIRTO: a registration-gated, multiverse-tested evaluation protocol for unsupervised anomaly segmentation">
+  <meta name="description" content="MIRTO is an evaluation protocol for unsupervised anomaly segmentation in brain MRI; the MITRA study tests it. Preprint coming soon.">
+  <meta name="keywords" content="unsupervised anomaly detection, anomaly segmentation, brain MRI, evaluation protocol, multiverse analysis, registration, threshold transfer, benchmarking, MIRTO, MITRA">
+  <meta name="author" content="Negin Kafee Hernashki, Soumick Chatterjee">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MIRTO: a registration-gated, multiverse-tested evaluation protocol for unsupervised anomaly segmentation">
+  <meta property="og:description" content="MIRTO is the protocol; MITRA is the study that tests it. Preprint coming soon.">
+  <meta property="og:url" content="https://soumickmj.github.io/MIRTO/">
+  <meta property="og:image" content="https://soumickmj.github.io/MIRTO/static/images/social_preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MIRTO: an evaluation protocol for unsupervised anomaly segmentation">
+  <meta name="twitter:description" content="MIRTO is the protocol; MITRA is the study that tests it. Preprint coming soon.">
+  <meta name="twitter:image" content="https://soumickmj.github.io/MIRTO/static/images/social_preview.jpg">
+  <meta name="theme-color" content="#0a1a26">
+
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/mirto.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ResearchProject",
+    "name": "MITRA: Multiverse Investigation of Training, Registration and Assessment choices",
+    "alternateName": "MIRTO: Multiverse-tested, Interval-based, Registration-gated, Threshold-transfer-aware evaluatiOn",
+    "description": "An evaluation protocol for unsupervised anomaly segmentation in brain MRI (MIRTO), and the study that tests it (MITRA).",
+    "url": "https://soumickmj.github.io/MIRTO/",
+    "member": [
+      {"@type": "Person", "name": "Negin Kafee Hernashki", "email": "negin.kafee@mail.polimi.it"},
+      {"@type": "Person", "name": "Soumick Chatterjee", "email": "soumick.chatterjee@fht.org"}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<main id="main-content">
+
+  <!-- Hero -->
+  <section class="hero mirto-hero">
+    <div class="hero-body">
+      <div class="container">
+        <div class="hero-text">
+          <p class="kicker">Unsupervised anomaly segmentation &middot; Brain MRI</p>
+
+          <h1 class="title publication-title">
+            <a class="abbr" href="#fn-mirto" id="ref-mirto"
+               data-tip="MIRTO: Multiverse-tested, Interval-based, Registration-gated, Threshold-transfer-aware evaluatiOn. Click for the story behind the name."
+               aria-describedby="fn-mirto">MIRTO<sup>1</sup></a>: a registration-gated, multiverse-tested evaluation protocol for unsupervised anomaly segmentation
+          </h1>
+
+          <p class="subtitle-line">
+            <a class="abbr" href="#fn-mitra" id="ref-mitra"
+               data-tip="MITRA: Multiverse Investigation of Training, Registration and Assessment choices. Click for the story behind the name."
+               aria-describedby="fn-mitra">MITRA<sup>2</sup></a> Project
+          </p>
+
+          <div class="publication-authors">
+            <span class="author-block"><a href="https://github.com/negin-kafee" target="_blank" rel="noopener">Negin Kafee Hernashki</a><sup>1,2</sup>,</span>
+            <span class="author-block"><a href="https://www.soumick.com" target="_blank" rel="noopener">Soumick Chatterjee</a><sup>3,4</sup></span>
+          </div>
+          <p class="affiliations">
+            <sup>1</sup>Università degli Studi di Milano, Milan, Italy &nbsp;
+            <sup>2</sup>Politecnico di Milano, Milan, Italy<br>
+            <sup>3</sup>Human Technopole, Milan, Italy &nbsp;
+            <sup>4</sup>Faculty of Computer Science, Otto von Guericke University Magdeburg, Germany
+          </p>
+
+          <div class="publication-links">
+            <span class="link-block">
+              <a class="button is-pending" href="javascript:void(0)" aria-disabled="true" title="The preprint will be released soon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.6H8V13zm0 3.4h8V18H8v-1.6z"/></svg>
+                Preprint <span class="pill-note">soon</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a class="button" href="https://github.com/soumickmj/MIRTO" target="_blank" rel="noopener">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+                Code <span class="pill-note">soon</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a class="button" href="#history">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18v2h-1v10a1 1 0 0 1-1 1h-6v1.6l3 2.4h-2.6L12 19.4 10.6 21H8l3-2.4V17H5a1 1 0 0 1-1-1V6H3V4zm3 2v9h12V6H6zm2 6.5 3-3 2 2 3-3V12l-3 3-2-2-3 3v-3.5z"/></svg>
+                Talk, posters and abstracts
+              </a>
+            </span>
+            <span class="link-block">
+              <a class="button" href="#contact">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.2 7H4v.4l8 5.4 8-5.4V7h-.2L12 12.2z"/></svg>
+                Contact
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="notice" role="note">
+    <span class="dot" aria-hidden="true"></span>
+    <p><strong>Preprint coming soon.</strong> The manuscript is in preparation. The paper and the code will be linked here once they are public.</p>
+  </div>
+
+  <!-- Teaser -->
+  <section class="mirto-section" id="teaser">
+    <div class="container">
+      <p class="eyebrow">Teaser</p>
+      <h2 class="title">Same maps, many verdicts</h2>
+      <figure class="teaser-figure">
+        <img src="static/images/teaser_multiverse.png" width="2400" height="840" loading="eager"
+             alt="Scatter of Dice scores for four anonymised models across 2,592 evaluation pipelines; the models trade places many times as the pipeline changes.">
+      </figure>
+      <p class="figcap"><strong>Four models, 2,592 ways to score them.</strong> Each position along the horizontal axis is one defensible evaluation pipeline applied to the same anomaly maps, and each mark is one model's Dice score under that pipeline. Models are anonymised until the preprint is released.</p>
+    </div>
+  </section>
+
+  <!-- Motivation -->
+  <section class="mirto-section is-tinted" id="motivation">
+    <div class="container content">
+      <p class="eyebrow">Motivation</p>
+      <h2 class="title">How much of a score belongs to the model?</h2>
+
+      <p>Unsupervised anomaly detection learns what healthy brain MRI looks like and flags whatever departs from it, so it needs no voxel-level annotation. New methods are usually compared through a single number on a public tumour dataset. That number is the end of a long chain of decisions taken after training: how each anomaly map is brought into the geometry of the reference annotation, how a threshold is chosen, how many false positives are tolerated, which metric is reported and how subjects are pooled. Most of them can be made in more than one defensible way, and few papers say which way they took.</p>
+
+      <p><a class="abbr" href="#fn-mirto" data-tip="MIRTO: Multiverse-tested, Interval-based, Registration-gated, Threshold-transfer-aware evaluatiOn">MIRTO<sup>1</sup></a> is an evaluation protocol built around that problem. It asks four things of any comparison between methods.</p>
+
+      <div class="principles">
+        <div class="principle">
+          <div class="letter">R</div>
+          <h3>Registration-gated</h3>
+          <p>No anomaly map is scored until it has been shown to sit in the same space as the reference annotation.</p>
+        </div>
+        <div class="principle">
+          <div class="letter">T</div>
+          <h3>Threshold-transfer-aware</h3>
+          <p>Thresholds are fixed on held-out validation data, and the protocol reports how well they carry over to the test set instead of assuming that they do.</p>
+        </div>
+        <div class="principle">
+          <div class="letter">I</div>
+          <h3>Interval-based</h3>
+          <p>Every difference between methods is reported with a paired, subject-level uncertainty interval, never as a bare point estimate.</p>
+        </div>
+        <div class="principle">
+          <div class="letter">M</div>
+          <h3>Multiverse-tested</h3>
+          <p>Results are reported across the whole space of defensible evaluation choices, so that readers can see which conclusions hold and which depend on one particular setting.</p>
+        </div>
+      </div>
+
+      <p>MIRTO is the protocol; <a class="abbr" href="#fn-mitra" data-tip="MITRA: Multiverse Investigation of Training, Registration and Assessment choices">MITRA<sup>2</sup></a> is the study that tests it. MITRA re-evaluates contemporary unsupervised anomaly segmentation methods for brain MRI with matched training data, a common reference geometry and analysis rules fixed in advance, and asks a simple question: when a method wins, what exactly has won?</p>
+    </div>
+  </section>
+
+  <!-- Earlier presentations -->
+  <section class="mirto-section" id="history">
+    <div class="container content">
+      <p class="eyebrow">Where it started</p>
+      <h2 class="title">Earlier presentations</h2>
+      <p>MIRTO grew out of two earlier stages of the project, both presented by Negin.</p>
+
+      <article class="milestone">
+        <p class="when">December 2025 &middot; Naples</p>
+        <h3>BBCC 2025, Bioinformatics and Computational Biology Conference</h3>
+        <p class="work-title">Poster: <em>Unsupervised brain MRI anomaly detection: revisiting the StRegA pipeline in the era of diffusion-based UAD</em></p>
+        <p>The starting point. <a href="https://github.com/soumickmj/StRegA" target="_blank" rel="noopener">StRegA</a> simplifies its input by segmenting brain tissue before a compact context-encoding VAE models healthy anatomy, but its reconstructions are over-smooth and segmentation errors can hide small lesions. The poster set StRegA against newer diffusion, contrastive and distillation methods and proposed benchmarking them on IXI, MOOD and BraTS.</p>
+        <p class="doc-links">
+          <a href="static/pdfs/BBCC2025_poster_Kafee.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.6H8V13zm0 3.4h8V18H8v-1.6z"/></svg>Poster</a>
+          <a href="static/pdfs/BBCC2025_abstract_Kafee.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.6H8V13zm0 3.4h8V18H8v-1.6z"/></svg>Abstract</a>
+        </p>
+        <div class="gallery is-single">
+          <figure class="poster-fig">
+            <a href="static/pdfs/BBCC2025_poster_Kafee.pdf" target="_blank" rel="noopener">
+              <img src="static/images/bbcc2025_poster.jpg" loading="lazy" alt="BBCC 2025 poster: Unsupervised brain MRI anomaly detection, revisiting the StRegA pipeline in the era of diffusion-based UAD.">
+            </a>
+            <figcaption>BBCC 2025 poster. Click to open the PDF.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="milestone">
+        <p class="when">2026 &middot; Girona</p>
+        <h3>ESMRMB 2026, European Society for Magnetic Resonance in Medicine and Biology</h3>
+        <p class="work-title">Lightning talk (session LTD23) and poster (PG180): <em>Benchmarking unsupervised anomaly detection in brain MRI: a systematic comparison across training regimes and preprocessing pipelines</em></p>
+        <p>The benchmark itself: five unsupervised anomaly detection methods, each trained in ten matched configurations on healthy scans and tested on BraTS 2020, with and without StRegA's tissue-segmentation preprocessing. Its conclusion, that the pipeline around a model can matter as much as the model itself, is where MIRTO begins.</p>
+        <p class="doc-links">
+          <a href="static/pdfs/ESMRMB2026_lightning_talk_Kafee.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.6H8V13zm0 3.4h8V18H8v-1.6z"/></svg>Talk slides</a>
+          <a href="static/pdfs/ESMRMB2026_poster_Kafee.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.6H8V13zm0 3.4h8V18H8v-1.6z"/></svg>Poster</a>
+          <a href="static/pdfs/ESMRMB2026_abstract_Kafee.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.6H8V13zm0 3.4h8V18H8v-1.6z"/></svg>Abstract</a>
+        </p>
+        <div class="gallery">
+          <figure class="poster-fig">
+            <a href="static/pdfs/ESMRMB2026_poster_Kafee.pdf" target="_blank" rel="noopener">
+              <img src="static/images/esmrmb2026_poster.jpg" loading="lazy" alt="ESMRMB 2026 poster PG180: Benchmarking unsupervised anomaly detection in brain MRI.">
+            </a>
+            <figcaption>ESMRMB 2026 poster PG180. Click to open the PDF.</figcaption>
+          </figure>
+          <div class="stack">
+            <figure>
+              <a href="static/pdfs/ESMRMB2026_lightning_talk_Kafee.pdf" target="_blank" rel="noopener">
+                <img src="static/images/esmrmb2026_talk.jpg" loading="lazy" alt="Title slide of the ESMRMB 2026 lightning talk, showing a T2 slice, its tissue map and an anomaly map stacked in layers.">
+              </a>
+              <figcaption>ESMRMB 2026 lightning talk, session LTD23. Click to open the slides.</figcaption>
+            </figure>
+            <figure>
+              <img src="static/images/esmrmb2026_maps.jpg" loading="lazy" alt="Two anomaly maps of the same BraTS 2020 slice with the tumour outlined in white: left from raw intensity input, right from tissue-map input.">
+              <figcaption>From the ESMRMB 2026 work: one BraTS 2020 slice, one method (SCRD4AD), two inputs. Anomaly map from raw intensities (left) and from StRegA's FSL FAST tissue map (right). White outline: tumour.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="mirto-section is-tinted" id="contact">
+    <div class="container">
+      <p class="eyebrow">Contact</p>
+      <h2 class="title">Get in touch</h2>
+      <p class="figcap" style="margin:0 0 1.4rem">For questions about the project, the preprint or possible collaborations, please write to either of us.</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="name">Negin Kafee Hernashki</div>
+          <div class="aff">Università degli Studi di Milano &middot; Politecnico di Milano</div>
+          <a class="mail" href="mailto:negin.kafee@mail.polimi.it">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.2 7H4v.4l8 5.4 8-5.4V7h-.2L12 12.2z"/></svg>
+            negin.kafee@mail.polimi.it</a>
+        </div>
+        <div class="contact-card">
+          <div class="name">Soumick Chatterjee</div>
+          <div class="aff">Human Technopole &middot; Otto von Guericke University Magdeburg</div>
+          <a class="mail" href="mailto:soumick.chatterjee@fht.org">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.2 7H4v.4l8 5.4 8-5.4V7h-.2L12 12.2z"/></svg>
+            soumick.chatterjee@fht.org</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notes on the names (footnotes) -->
+  <section class="name-notes" id="names">
+    <div class="container">
+      <h2>Notes on the names</h2>
+      <ol>
+        <li id="fn-mirto">
+          <strong>MIRTO</strong>: <strong>M</strong>ultiverse-tested, <strong>I</strong>nterval-based, <strong>R</strong>egistration-gated, <strong>T</strong>hreshold-transfer-aware evaluati<strong>O</strong>n.
+          Mirto is the myrtle-berry liqueur of Sardinia. Our unsupervised anomaly detection work is named after Italian liqueurs: the first was <a href="https://github.com/soumickmj/StRegA" target="_blank" rel="noopener">StRegA</a>, after Strega, the saffron-yellow herbal liqueur of Benevento, and MIRTO follows it.
+          <a class="backref" href="#ref-mirto" aria-label="Back to the title">&#8617;</a>
+        </li>
+        <li id="fn-mitra">
+          <strong>MITRA</strong>: <strong>M</strong>ultiverse <strong>I</strong>nvestigation of <strong>T</strong>raining, <strong>R</strong>egistration and <strong>A</strong>ssessment choices.
+          Mithra is an ancient Indo-Iranian deity of covenants, light, justice and the sun. In the Vedas he appears as Mitra, who with Varuna upholds friendship, contracts and cosmic order. In ancient Iran and in Zoroastrianism, Mithra became a major <em>yazata</em> (divine being) guarding truth, cattle, harvests and the bonds between people. The Roman mystery cult of Mithras, which emerged in the Roman Empire in the first century AD, took its inspiration from the Persian god. In Bengali, <em>mitra</em> (মিত্র) simply means 'friend'.
+          <a class="backref" href="#ref-mitra" aria-label="Back to the subtitle">&#8617;</a>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a>, which was adopted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener">Nerfies</a> project page.
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International Licence</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
