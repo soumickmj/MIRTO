@@ -4,23 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>MIRTO: a registration-gated, multiverse-tested evaluation protocol for unsupervised anomaly segmentation</title>
-  <meta name="title" content="MIRTO: a registration-gated, multiverse-tested evaluation protocol for unsupervised anomaly segmentation">
-  <meta name="description" content="MIRTO is an evaluation protocol for unsupervised anomaly segmentation in brain MRI; the MITRA study tests it. Preprint coming soon.">
-  <meta name="keywords" content="unsupervised anomaly detection, anomaly segmentation, brain MRI, evaluation protocol, multiverse analysis, registration, threshold transfer, benchmarking, MIRTO, MITRA">
+  <title>MIRTO: a registration-gated, multiverse-tested evaluation protocol for unsupervised anomaly segmentation in brain MRI</title>
+  <meta name="title" content="MIRTO: a registration-gated, multiverse-tested evaluation protocol for unsupervised anomaly segmentation in brain MRI">
+  <meta name="description" content="MIRTO is an evaluation protocol for unsupervised anomaly segmentation in brain MRI that gates geometry, accounts for threshold transfer, tests every conclusion over 15,552 defensible pipelines and reports paired intervals. Preprint: arXiv:2610.02136.">
+  <meta name="keywords" content="unsupervised anomaly detection, anomaly segmentation, brain MRI, evaluation protocol, multiverse analysis, registration, threshold transfer, conformal risk control, benchmarking, MIRTO, MITRA, StRegA">
   <meta name="author" content="Negin Kafee Hernashki, Soumick Chatterjee">
   <meta name="robots" content="index, follow">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="MIRTO: a registration-gated, multiverse-tested evaluation protocol for unsupervised anomaly segmentation">
-  <meta property="og:description" content="MIRTO is the protocol; MITRA is the study that tests it. Preprint coming soon.">
+  <meta property="og:title" content="MIRTO: an evaluation protocol for unsupervised anomaly segmentation in brain MRI">
+  <meta property="og:description" content="How much of a UAD leaderboard is decided by the evaluation rather than the model? Preprint on arXiv (2610.02136).">
   <meta property="og:url" content="https://soumickmj.github.io/MIRTO/">
   <meta property="og:image" content="https://soumickmj.github.io/MIRTO/static/images/social_preview.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="MIRTO: an evaluation protocol for unsupervised anomaly segmentation">
-  <meta name="twitter:description" content="MIRTO is the protocol; MITRA is the study that tests it. Preprint coming soon.">
+  <meta name="twitter:title" content="MIRTO: an evaluation protocol for unsupervised anomaly segmentation in brain MRI">
+  <meta name="twitter:description" content="How much of a UAD leaderboard is decided by the evaluation rather than the model? Preprint on arXiv (2610.02136).">
   <meta name="twitter:image" content="https://soumickmj.github.io/MIRTO/static/images/social_preview.jpg">
   <meta name="theme-color" content="#0a1a26">
 
@@ -28,7 +28,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
@@ -37,24 +37,41 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ResearchProject",
-    "name": "MITRA: Multiverse Investigation of Training, Registration and Assessment choices",
-    "alternateName": "MIRTO: Multiverse-tested, Interval-based, Registration-gated, Threshold-transfer-aware evaluatiOn",
-    "description": "An evaluation protocol for unsupervised anomaly segmentation in brain MRI (MIRTO), and the study that tests it (MITRA).",
-    "url": "https://soumickmj.github.io/MIRTO/",
-    "member": [
-      {"@type": "Person", "name": "Negin Kafee Hernashki", "email": "negin.kafee@mail.polimi.it"},
-      {"@type": "Person", "name": "Soumick Chatterjee", "email": "soumick.chatterjee@fht.org"}
-    ]
+    "@type": "ScholarlyArticle",
+    "headline": "MIRTO: a registration-gated, multiverse-tested evaluation protocol for unsupervised anomaly segmentation in brain MRI",
+    "url": "https://arxiv.org/abs/2610.02136",
+    "identifier": "arXiv:2610.02136",
+    "datePublished": "2026-10",
+    "author": [
+      {"@type": "Person", "name": "Negin Kafee Hernashki", "identifier": "https://orcid.org/0009-0004-9006-5234"},
+      {"@type": "Person", "name": "Soumick Chatterjee", "identifier": "https://orcid.org/0000-0001-7594-1188"}
+    ],
+    "isPartOf": {
+      "@type": "ResearchProject",
+      "name": "MITRA: Multiverse Investigation of Training, Registration and Assessment choices",
+      "url": "https://soumickmj.github.io/MIRTO/"
+    }
   }
   </script>
 </head>
 <body>
 
+<nav class="toc" aria-label="Sections">
+  <div class="toc-inner">
+    <a class="toc-brand" href="#top">MIRTO</a>
+    <a href="#abstract">Abstract</a>
+    <a href="#evolution">Evolution</a>
+    <a href="#protocol">Protocol</a>
+    <a href="#findings">Findings</a>
+    <a href="#hypotheses">Hypotheses</a>
+    <a href="#bibtex">Cite</a>
+  </div>
+</nav>
+
 <main id="main-content">
 
   <!-- Hero -->
-  <section class="hero mirto-hero">
+  <section class="hero mirto-hero" id="top">
     <div class="hero-body">
       <div class="container">
         <div class="hero-text">
@@ -63,18 +80,18 @@
           <h1 class="title publication-title">
             <a class="abbr" href="#fn-mirto" id="ref-mirto"
                data-tip="MIRTO: Multiverse-tested, Interval-based, Registration-gated, Threshold-transfer-aware evaluatiOn. Click for the story behind the name."
-               aria-describedby="fn-mirto">MIRTO<sup>1</sup></a>: a registration-gated, multiverse-tested evaluation protocol for unsupervised anomaly segmentation
+               aria-describedby="fn-mirto">MIRTO<sup>1</sup></a>: a registration-gated, multiverse-tested evaluation protocol for unsupervised anomaly segmentation in brain MRI
           </h1>
 
           <p class="subtitle-line">
-            <a class="abbr" href="#fn-mitra" id="ref-mitra"
+            A preprint of the <a class="abbr" href="#fn-mitra" id="ref-mitra"
                data-tip="MITRA: Multiverse Investigation of Training, Registration and Assessment choices. Click for the story behind the name."
-               aria-describedby="fn-mitra">MITRA<sup>2</sup></a> Project
+               aria-describedby="fn-mitra">MITRA<sup>2</sup></a> project
           </p>
 
           <div class="publication-authors">
-            <span class="author-block"><a href="https://github.com/negin-kafee" target="_blank" rel="noopener">Negin Kafee Hernashki</a><sup>1,2</sup>,</span>
-            <span class="author-block"><a href="https://www.soumick.com" target="_blank" rel="noopener">Soumick Chatterjee</a><sup>3,4</sup></span>
+            <span class="author-block"><a href="https://github.com/negin-kafee" target="_blank" rel="noopener">Negin Kafee Hernashki</a><sup>1,2</sup><a class="orcid" href="https://orcid.org/0009-0004-9006-5234" target="_blank" rel="noopener" aria-label="ORCID of Negin Kafee Hernashki">iD</a>,</span>
+            <span class="author-block"><a href="https://www.soumick.com" target="_blank" rel="noopener">Soumick Chatterjee</a><sup>3,4</sup><a class="orcid" href="https://orcid.org/0000-0001-7594-1188" target="_blank" rel="noopener" aria-label="ORCID of Soumick Chatterjee">iD</a></span>
           </div>
           <p class="affiliations">
             <sup>1</sup>Università degli Studi di Milano, Milan, Italy &nbsp;
@@ -85,27 +102,33 @@
 
           <div class="publication-links">
             <span class="link-block">
-              <a class="button is-pending" href="javascript:void(0)" aria-disabled="true" title="The preprint will be released soon">
+              <a class="button is-primary-link" href="https://arxiv.org/abs/2610.02136" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.6H8V13zm0 3.4h8V18H8v-1.6z"/></svg>
-                Preprint <span class="pill-note">soon</span>
+                arXiv <span class="pill-note">2610.02136</span>
               </a>
             </span>
             <span class="link-block">
-              <a class="button" href="https://github.com/soumickmj/MIRTO" target="_blank" rel="noopener">
+              <a class="button" href="https://arxiv.org/pdf/2610.02136" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.2l3.6-3.6 1.4 1.4-6 6-6-6 1.4-1.4 3.6 3.6V3h2zM5 19h14v2H5v-2z"/></svg>
+                PDF
+              </a>
+            </span>
+            <span class="link-block">
+              <a class="button is-pending" href="https://github.com/soumickmj/MIRTO" target="_blank" rel="noopener" title="The evaluator and analysis code will be released in this repository">
                 <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
                 Code <span class="pill-note">soon</span>
               </a>
             </span>
             <span class="link-block">
-              <a class="button" href="#history">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18v2h-1v10a1 1 0 0 1-1 1h-6v1.6l3 2.4h-2.6L12 19.4 10.6 21H8l3-2.4V17H5a1 1 0 0 1-1-1V6H3V4zm3 2v9h12V6H6zm2 6.5 3-3 2 2 3-3V12l-3 3-2-2-3 3v-3.5z"/></svg>
-                Talk, posters and abstracts
+              <a class="button" href="#bibtex">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12a2 2 0 0 1 2 2v14l-8-4-8 4V6a2 2 0 0 1 2-2z"/></svg>
+                BibTeX
               </a>
             </span>
             <span class="link-block">
-              <a class="button" href="#contact">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.2 7H4v.4l8 5.4 8-5.4V7h-.2L12 12.2z"/></svg>
-                Contact
+              <a class="button" href="#evolution">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18a2 2 0 1 1 0 .01V18zm8-6a2 2 0 1 1 0 .01V12zm8-6a2 2 0 1 1 0 .01V6zM5.4 16.6l5.2-3.2.8 1.3-5.2 3.2-.8-1.3zm8-4.8 5.2-3.2.8 1.3-5.2 3.2-.8-1.3z"/></svg>
+                Talk, posters and abstracts
               </a>
             </span>
           </div>
@@ -116,121 +139,411 @@
 
   <div class="notice" role="note">
     <span class="dot" aria-hidden="true"></span>
-    <p><strong>Preprint coming soon.</strong> The manuscript is in preparation. The paper and the code will be linked here once they are public.</p>
+    <p><strong>The preprint is out.</strong> Read it on <a href="https://arxiv.org/abs/2610.02136" target="_blank" rel="noopener">arXiv (2610.02136)</a>. The evaluator, the analysis code, the hypotheses with their decision criteria and the reporting checklist will be released in the <a href="https://github.com/soumickmj/MIRTO" target="_blank" rel="noopener">MIRTO repository</a>.</p>
   </div>
+
+  <!-- Key numbers -->
+  <section class="stats" aria-label="The study in numbers">
+    <div class="container">
+      <div class="stat"><span class="num">4</span><span class="lab">UAD methods, one healthy training set</span></div>
+      <div class="stat"><span class="num">312</span><span class="lab">BraTS 2020 test subjects, 24 for validation</span></div>
+      <div class="stat"><span class="num">15,552</span><span class="lab">defensible evaluation pipelines per method</span></div>
+      <div class="stat"><span class="num">9</span><span class="lab">hypotheses, each with a decision criterion</span></div>
+    </div>
+  </section>
 
   <!-- Teaser -->
   <section class="mirto-section" id="teaser">
-    <div class="container">
+    <div class="container is-wide">
       <p class="eyebrow">Teaser</p>
       <h2 class="title">Same maps, many verdicts</h2>
       <figure class="teaser-figure">
         <img src="static/images/teaser_multiverse.png" width="2400" height="840" loading="eager"
-             alt="Scatter of Dice scores for four anonymised models across 2,592 evaluation pipelines; the models trade places many times as the pipeline changes.">
+             alt="Dice of REFLECT, UCCD, cDDPM and AnomalyDINO in each of 2,592 defensible evaluation pipelines. REFLECT, UCCD and cDDPM trade places many times; AnomalyDINO stays well below.">
       </figure>
-      <p class="figcap"><strong>Four models, 2,592 ways to score them.</strong> Each position along the horizontal axis is one defensible evaluation pipeline applied to the same anomaly maps, and each mark is one model's Dice score under that pipeline. Models are anonymised until the preprint is released.</p>
-    </div>
-  </section>
-
-  <!-- Motivation -->
-  <section class="mirto-section is-tinted" id="motivation">
-    <div class="container content">
-      <p class="eyebrow">Motivation</p>
-      <h2 class="title">How much of a score belongs to the model?</h2>
-
-      <p>Unsupervised anomaly detection learns what healthy brain MRI looks like and flags whatever departs from it, so it needs no voxel-level annotation. New methods are usually compared through a single number on a public tumour dataset. That number is the end of a long chain of decisions taken after training: how each anomaly map is brought into the geometry of the reference annotation, how a threshold is chosen, how many false positives are tolerated, which metric is reported and how subjects are pooled. Most of them can be made in more than one defensible way, and few papers say which way they took.</p>
-
-      <p><a class="abbr" href="#fn-mirto" data-tip="MIRTO: Multiverse-tested, Interval-based, Registration-gated, Threshold-transfer-aware evaluatiOn">MIRTO<sup>1</sup></a> is an evaluation protocol built around that problem. It asks four things of any comparison between methods.</p>
-
-      <div class="principles">
-        <div class="principle">
-          <div class="letter">R</div>
-          <h3>Registration-gated</h3>
-          <p>No anomaly map is scored until it has been shown to sit in the same space as the reference annotation.</p>
+      <div class="winners" aria-label="Share of Dice universes in which each method ranks first">
+        <p class="winners-title">Which method ranks first in Dice?</p>
+        <div class="winners-bar">
+          <span style="flex:38.89;background:#E69F00">UCCD 38.9%</span>
+          <span style="flex:35.19;background:#0072B2">REFLECT 35.2%</span>
+          <span style="flex:25.93;background:#009E73">cDDPM 25.9%</span>
         </div>
-        <div class="principle">
-          <div class="letter">T</div>
-          <h3>Threshold-transfer-aware</h3>
-          <p>Thresholds are fixed on held-out validation data, and the protocol reports how well they carry over to the test set instead of assuming that they do.</p>
-        </div>
-        <div class="principle">
-          <div class="letter">I</div>
-          <h3>Interval-based</h3>
-          <p>Every difference between methods is reported with a paired, subject-level uncertainty interval, never as a bare point estimate.</p>
-        </div>
-        <div class="principle">
-          <div class="letter">M</div>
-          <h3>Multiverse-tested</h3>
-          <p>Results are reported across the whole space of defensible evaluation choices, so that readers can see which conclusions hold and which depend on one particular setting.</p>
-        </div>
+        <p class="winners-note">Share of the 2,592 Dice universes in which each method has the highest score. AnomalyDINO never does.</p>
       </div>
-
-      <p>MIRTO is the protocol; <a class="abbr" href="#fn-mitra" data-tip="MITRA: Multiverse Investigation of Training, Registration and Assessment choices">MITRA<sup>2</sup></a> is the study that tests it. MITRA re-evaluates contemporary unsupervised anomaly segmentation methods for brain MRI with matched training data, a common reference geometry and analysis rules fixed in advance, and asks a simple question: when a method wins, what exactly has won?</p>
+      <p class="figcap"><strong>Four models, one set of anomaly maps, 2,592 ways to score them in Dice.</strong> Each column is one defensible evaluation pipeline (threshold protocol, false-positive budget, post-processing, lesion definition, hit criterion, aggregation and support), and each mark is one model's Dice under it. All four models were trained on the same healthy data and tested on the same 312 subjects. Nothing about the models changes from left to right; only the evaluation does.</p>
     </div>
   </section>
 
-  <!-- Earlier presentations -->
-  <section class="mirto-section" id="history">
+  <!-- Abstract -->
+  <section class="mirto-section is-tinted" id="abstract">
     <div class="container content">
-      <p class="eyebrow">Where it started</p>
-      <h2 class="title">Earlier presentations</h2>
-      <p>MIRTO grew out of two earlier stages of the project, both presented by Negin.</p>
+      <p class="eyebrow">Abstract</p>
+      <h2 class="title">In brief</h2>
+      <p class="abstract-text">Unsupervised anomaly detection (UAD) methods for brain MRI are ranked by a single score, yet that score rests on choices that are rarely reported: how each anomaly map is aligned with the reference, how and on which data the threshold is set, and which false-positive budget, metric, aggregation and lesion definition are used. We present MIRTO, an evaluation protocol that makes these choices explicit and measures their effect. It gates the geometry of every comparison with a registration check and label-free diagnostics of known power, sets thresholds on validation data alone and reports the false-positive volume actually realised on test, repeats each comparison over 15,552 defensible evaluation pipelines, and attaches paired subject-bootstrap intervals with multiplicity control. Applied to four UAD methods trained on the same healthy data and tested on 312 BraTS 2020 subjects, MIRTO showed that an axis-order mismatch between stored maps and the reference lowered a diffusion model's voxel AUROC from 0.873 to 0.583 whilst barely moving its slice-level AUROC. Within each metric, the method explained at least 0.95 of the variance in voxel AUROC and AUPRC and 0.77 in Dice, but only 0.14 in lesion sensitivity, where the lesion definition and hit criterion dominated. A Dice advantage that was significant at validation thresholds vanished at equal realised false-positive burden, and an exact identity attributes it to threshold transfer. A training-free change to REFLECT's latent aggregation raised Dice at equal burden by 0.052. Nine hypotheses were tested against explicit criteria; because the same cohort served to develop the protocol, all inference is exploratory.</p>
+      <p class="keywords"><span>Unsupervised anomaly detection</span><span>Brain MRI</span><span>Evaluation protocol</span><span>Multiverse analysis</span><span>Conformal risk control</span><span>Reproducibility</span></p>
+    </div>
+  </section>
 
-      <article class="milestone">
-        <p class="when">December 2025 &middot; Naples</p>
-        <h3>BBCC 2025, Bioinformatics and Computational Biology Conference</h3>
-        <p class="work-title">Poster: <em>Unsupervised brain MRI anomaly detection: revisiting the StRegA pipeline in the era of diffusion-based UAD</em></p>
-        <p>The starting point. <a href="https://github.com/soumickmj/StRegA" target="_blank" rel="noopener">StRegA</a> simplifies its input by segmenting brain tissue before a compact context-encoding VAE models healthy anatomy, but its reconstructions are over-smooth and segmentation errors can hide small lesions. The poster set StRegA against newer diffusion, contrastive and distillation methods and proposed benchmarking them on IXI, MOOD and BraTS.</p>
-        <p class="doc-links">
-          <a href="static/pdfs/BBCC2025_poster_Kafee.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.6H8V13zm0 3.4h8V18H8v-1.6z"/></svg>Poster</a>
-          <a href="static/pdfs/BBCC2025_abstract_Kafee.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.6H8V13zm0 3.4h8V18H8v-1.6z"/></svg>Abstract</a>
-        </p>
-        <div class="gallery is-single">
-          <figure class="poster-fig">
-            <a href="static/pdfs/BBCC2025_poster_Kafee.pdf" target="_blank" rel="noopener">
-              <img src="static/images/bbcc2025_poster.jpg" loading="lazy" alt="BBCC 2025 poster: Unsupervised brain MRI anomaly detection, revisiting the StRegA pipeline in the era of diffusion-based UAD.">
-            </a>
-            <figcaption>BBCC 2025 poster. Click to open the PDF.</figcaption>
-          </figure>
+  <!-- Evolution -->
+  <section class="mirto-section" id="evolution">
+    <div class="container is-wide content">
+      <p class="eyebrow">How the project evolved</p>
+      <h2 class="title">From a better model to a better question</h2>
+      <p class="lede">MITRA began as an attempt to improve a model. It became a study of how models are judged. Three stages, each presented in public, mark the turn: a poster that proposed upgrading StRegA with newer methods, a benchmark that found the pipeline around a model could matter as much as the model, and MIRTO, which asks how much of any leaderboard the evaluation decides.</p>
+
+      <figure class="diagram-figure">
+        <div class="diagram-scroll">
+<svg class="dg" viewBox="0 0 960 568" role="img" aria-label="Which methods appeared at each stage of the project, from the BBCC 2025 poster to MIRTO" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ar" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#6b7682"/></marker></defs><rect x="276" y="16" width="192" height="72" rx="8" fill="#fbfaf7"/><rect x="276" y="16" width="192" height="72" rx="8" fill="#ffffff" stroke="#16212c" stroke-width="1"/><text x="372" y="36" font-size="8" fill="#6b7682" text-anchor="middle" font-weight="600" font-family="'Geist Mono', ui-monospace, monospace" letter-spacing="0.08em">NAPLES · DEC 2025</text><text x="372" y="58" font-size="16" fill="#16212c" text-anchor="middle" font-weight="600" font-family="Inter, system-ui, sans-serif" >BBCC 2025</text><text x="372" y="76" font-size="9" fill="#46525e" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >Poster</text><rect x="492" y="16" width="192" height="72" rx="8" fill="#fbfaf7"/><rect x="492" y="16" width="192" height="72" rx="8" fill="#ffffff" stroke="#16212c" stroke-width="1"/><text x="588" y="36" font-size="8" fill="#6b7682" text-anchor="middle" font-weight="600" font-family="'Geist Mono', ui-monospace, monospace" letter-spacing="0.08em">GIRONA · SEP 2026</text><text x="588" y="58" font-size="16" fill="#16212c" text-anchor="middle" font-weight="600" font-family="Inter, system-ui, sans-serif" >ESMRMB 2026</text><text x="588" y="76" font-size="9" fill="#46525e" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >Talk + poster</text><rect x="708" y="16" width="192" height="72" rx="8" fill="#fbfaf7"/><rect x="708" y="16" width="192" height="72" rx="8" fill="#f6eef4" stroke="#7a3a6b" stroke-width="1"/><text x="804" y="36" font-size="8" fill="#7a3a6b" text-anchor="middle" font-weight="600" font-family="'Geist Mono', ui-monospace, monospace" letter-spacing="0.08em">ARXIV · OCT 2026</text><text x="804" y="58" font-size="16" fill="#16212c" text-anchor="middle" font-weight="600" font-family="Inter, system-ui, sans-serif" >MIRTO</text><text x="804" y="76" font-size="9" fill="#46525e" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >arXiv:2610.02136</text><line x1="470" y1="52" x2="488" y2="52" stroke="#6b7682" stroke-width="1" marker-end="url(#ar)"/><line x1="686" y1="52" x2="704" y2="52" stroke="#6b7682" stroke-width="1" marker-end="url(#ar)"/><text x="24" y="112" font-size="8" fill="#6b7682" text-anchor="start" font-weight="600" font-family="'Geist Mono', ui-monospace, monospace" letter-spacing="0.12em">METHOD</text><rect x="16" y="124" width="928" height="40" fill="rgba(22,33,44,0.025)"/><text x="24" y="142" font-size="12" fill="#16212c" text-anchor="start" font-weight="600" font-family="Inter, system-ui, sans-serif" >StRegA</text><text x="24" y="156" font-size="9" fill="#6b7682" text-anchor="start" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >tissue map + context-encoding VAE</text><line x1="372" y1="144" x2="588" y2="144" stroke="rgba(22,33,44,0.25)" stroke-width="1"/><circle cx="372" cy="144" r="6" fill="#fbfaf7" stroke="#46525e" stroke-width="1.2"/><circle cx="588" cy="144" r="7" fill="#16212c"/><text x="24" y="182" font-size="12" fill="#16212c" text-anchor="start" font-weight="600" font-family="Inter, system-ui, sans-serif" >SCRD4AD</text><text x="24" y="196" font-size="9" fill="#6b7682" text-anchor="start" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >contrastive reverse distillation</text><line x1="372" y1="184" x2="588" y2="184" stroke="rgba(22,33,44,0.25)" stroke-width="1"/><circle cx="372" cy="184" r="6" fill="#fbfaf7" stroke="#46525e" stroke-width="1.2"/><circle cx="588" cy="184" r="7" fill="#16212c"/><rect x="16" y="204" width="928" height="40" fill="rgba(22,33,44,0.025)"/><text x="24" y="222" font-size="12" fill="#16212c" text-anchor="start" font-weight="600" font-family="Inter, system-ui, sans-serif" >MAD-AD</text><text x="24" y="236" font-size="9" fill="#6b7682" text-anchor="start" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >masked diffusion</text><line x1="372" y1="224" x2="588" y2="224" stroke="rgba(22,33,44,0.25)" stroke-width="1"/><circle cx="372" cy="224" r="6" fill="#fbfaf7" stroke="#46525e" stroke-width="1.2"/><circle cx="588" cy="224" r="7" fill="#16212c"/><text x="24" y="262" font-size="12" fill="#16212c" text-anchor="start" font-weight="600" font-family="Inter, system-ui, sans-serif" >cDDPM</text><text x="24" y="276" font-size="9" fill="#6b7682" text-anchor="start" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >input-conditioned diffusion</text><line x1="372" y1="264" x2="804" y2="264" stroke="#7a3a6b" stroke-width="2"/><circle cx="372" cy="264" r="6" fill="#fbfaf7" stroke="#46525e" stroke-width="1.2"/><circle cx="588" cy="264" r="7" fill="#7a3a6b"/><circle cx="804" cy="264" r="7" fill="#7a3a6b"/><rect x="16" y="284" width="928" height="40" fill="rgba(22,33,44,0.025)"/><text x="24" y="302" font-size="12" fill="#16212c" text-anchor="start" font-weight="600" font-family="Inter, system-ui, sans-serif" >UCCD</text><text x="24" y="316" font-size="9" fill="#6b7682" text-anchor="start" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >contrastive-conditioned diffusion</text><line x1="372" y1="304" x2="804" y2="304" stroke="#7a3a6b" stroke-width="2"/><circle cx="372" cy="304" r="6" fill="#fbfaf7" stroke="#46525e" stroke-width="1.2"/><circle cx="588" cy="304" r="7" fill="#7a3a6b"/><circle cx="804" cy="304" r="7" fill="#7a3a6b"/><text x="24" y="342" font-size="12" fill="#16212c" text-anchor="start" font-weight="600" font-family="Inter, system-ui, sans-serif" >REFLECT</text><text x="24" y="356" font-size="9" fill="#6b7682" text-anchor="start" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >rectified flow in latent space</text><circle cx="804" cy="344" r="7" fill="#16212c"/><rect x="16" y="364" width="928" height="40" fill="rgba(22,33,44,0.025)"/><text x="24" y="382" font-size="12" fill="#16212c" text-anchor="start" font-weight="600" font-family="Inter, system-ui, sans-serif" >AnomalyDINO</text><text x="24" y="396" font-size="9" fill="#6b7682" text-anchor="start" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >frozen DINOv2 memory bank</text><circle cx="804" cy="384" r="7" fill="#16212c"/><text x="24" y="422" font-size="12" fill="#16212c" text-anchor="start" font-weight="600" font-family="Inter, system-ui, sans-serif" >z-scored T2 / FLAIR</text><text x="24" y="436" font-size="9" fill="#6b7682" text-anchor="start" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >model-free baselines</text><circle cx="804" cy="424" r="7" fill="#16212c"/><line x1="16" y1="456" x2="944" y2="456" stroke="rgba(22,33,44,0.12)" stroke-width="0.8"/><text x="24" y="476" font-size="12" fill="#16212c" text-anchor="start" font-weight="600" font-family="Inter, system-ui, sans-serif" >Data</text><text x="24" y="490" font-size="9" fill="#6b7682" text-anchor="start" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >training → test</text><text x="372" y="476" font-size="11" fill="#16212c" text-anchor="middle" font-weight="500" font-family="Inter, system-ui, sans-serif" >IXI · MOOD · BraTS</text><text x="372" y="490" font-size="9" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >planned</text><text x="588" y="476" font-size="11" fill="#16212c" text-anchor="middle" font-weight="500" font-family="Inter, system-ui, sans-serif" >IXI, MOOD → BraTS T1/T2</text><text x="588" y="490" font-size="9" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >10 training sets, raw vs FAST</text><text x="804" y="476" font-size="11" fill="#16212c" text-anchor="middle" font-weight="500" font-family="Inter, system-ui, sans-serif" >IXI T2 → BraTS 2020 T2</text><text x="804" y="490" font-size="9" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >one training set, 312 test</text><line x1="16" y1="526" x2="944" y2="526" stroke="rgba(22,33,44,0.10)" stroke-width="0.8"/><text x="24" y="548" font-size="8" fill="#6b7682" text-anchor="start" font-weight="600" font-family="'Geist Mono', ui-monospace, monospace" letter-spacing="0.14em">LEGEND</text><circle cx="112" cy="545" r="5" fill="#fbfaf7" stroke="#46525e" stroke-width="1.2"/><text x="124" y="548" font-size="10" fill="#46525e" text-anchor="start" font-weight="400" font-family="Inter, system-ui, sans-serif" >discussed or proposed</text><circle cx="292" cy="545" r="6" fill="#16212c"/><text x="304" y="548" font-size="10" fill="#46525e" text-anchor="start" font-weight="400" font-family="Inter, system-ui, sans-serif" >trained and evaluated</text><line x1="464" y1="545" x2="496" y2="545" stroke="#7a3a6b" stroke-width="2"/><circle cx="480" cy="545" r="6" fill="#7a3a6b"/><text x="508" y="548" font-size="10" fill="#46525e" text-anchor="start" font-weight="400" font-family="Inter, system-ui, sans-serif" >carried from the benchmark into MIRTO</text></svg>
         </div>
-      </article>
+        <p class="scroll-hint">Scroll sideways to see all three stages.</p>
+        <figcaption><strong>Which methods appeared at each stage.</strong> Hollow circles mark methods discussed or proposed; filled circles mark methods trained and evaluated in that stage. cDDPM and UCCD (purple) run through the benchmark into MIRTO, which adds REFLECT, AnomalyDINO and two model-free intensity baselines, chosen to cover one-step transport, two forms of conditioned diffusion and a training-free foundation-model memory bank.</figcaption>
+      </figure>
 
-      <article class="milestone">
-        <p class="when">2026 &middot; Girona</p>
-        <h3>ESMRMB 2026, European Society for Magnetic Resonance in Medicine and Biology</h3>
-        <p class="work-title">Lightning talk (session LTD23) and poster (PG180): <em>Benchmarking unsupervised anomaly detection in brain MRI: a systematic comparison across training regimes and preprocessing pipelines</em></p>
-        <p>The benchmark itself: five unsupervised anomaly detection methods, each trained in ten matched configurations on healthy scans and tested on BraTS 2020, with and without StRegA's tissue-segmentation preprocessing. Its conclusion, that the pipeline around a model can matter as much as the model itself, is where MIRTO begins.</p>
-        <p class="doc-links">
-          <a href="static/pdfs/ESMRMB2026_lightning_talk_Kafee.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.6H8V13zm0 3.4h8V18H8v-1.6z"/></svg>Talk slides</a>
-          <a href="static/pdfs/ESMRMB2026_poster_Kafee.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.6H8V13zm0 3.4h8V18H8v-1.6z"/></svg>Poster</a>
-          <a href="static/pdfs/ESMRMB2026_abstract_Kafee.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.6H8V13zm0 3.4h8V18H8v-1.6z"/></svg>Abstract</a>
-        </p>
-        <div class="gallery">
-          <figure class="poster-fig">
-            <a href="static/pdfs/ESMRMB2026_poster_Kafee.pdf" target="_blank" rel="noopener">
-              <img src="static/images/esmrmb2026_poster.jpg" loading="lazy" alt="ESMRMB 2026 poster PG180: Benchmarking unsupervised anomaly detection in brain MRI.">
-            </a>
-            <figcaption>ESMRMB 2026 poster PG180. Click to open the PDF.</figcaption>
-          </figure>
-          <div class="stack">
-            <figure>
-              <a href="static/pdfs/ESMRMB2026_lightning_talk_Kafee.pdf" target="_blank" rel="noopener">
-                <img src="static/images/esmrmb2026_talk.jpg" loading="lazy" alt="Title slide of the ESMRMB 2026 lightning talk, showing a T2 slice, its tissue map and an anomaly map stacked in layers.">
+      <!-- Stage 1 -->
+      <article class="stage" id="stage-bbcc">
+        <div class="stage-rail" aria-hidden="true"><span class="stage-num">1</span></div>
+        <div class="stage-body">
+          <p class="when">December 2025 &middot; Naples &middot; Poster</p>
+          <h3>BBCC 2025: revisiting StRegA in the era of diffusion-based UAD</h3>
+          <p class="work-title">Bioinformatics and Computational Biology Conference. Poster: <em>Unsupervised brain MRI anomaly detection: revisiting the StRegA pipeline in the era of diffusion-based UAD</em>.</p>
+          <div class="qa">
+            <p class="q">The question</p>
+            <p>Can StRegA's tissue-aware input still help when it is combined with the newer generative and contrastive models?</p>
+          </div>
+          <p><a href="https://github.com/soumickmj/StRegA" target="_blank" rel="noopener">StRegA</a> segments brain tissue with FSL FAST before a compact context-encoding VAE learns healthy anatomy. The simpler input lets a small model do the work, but its reconstructions tend to be over-smooth and can miss small lesions, and errors in the tissue segmentation can hide or misclassify disease. The abstract surveyed what had appeared since: scale-aware contrastive reverse distillation, conditional and guided diffusion models with sharper pseudo-healthy reconstructions, masked diffusion pre-training, and normative modelling of healthy variability. It proposed pairing StRegA's input simplification with these methods and validating the result on three complementary datasets: IXI for healthy anatomy, MOOD for synthetic anomalies and BraTS for real tumours.</p>
+          <details class="abstract-box">
+            <summary>Submitted abstract, in short</summary>
+            <p><em>Unsupervised brain MRI anomaly detection with enhanced StRegA integrating diffusion models, multi-scale distillation and normative representation learning.</em> The abstract set out StRegA's strengths (tissue-segmented input, a compact context-encoding VAE, less reliance on large architectures) and its limits (over-smooth reconstructions, dependence on the tissue segmentation). It argued that the newer methods perform well on benchmark datasets but that their behaviour on varied clinical groups was largely unknown, and proposed testing whether tissue-aware context improves robustness to scanner and anatomical variability when combined with diffusion and contrastive models. The full text is in the PDF below.</p>
+          </details>
+          <p class="doc-links">
+            <a href="static/pdfs/BBCC2025_poster_Kafee.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.6H8V13zm0 3.4h8V18H8v-1.6z"/></svg>Poster</a>
+            <a href="static/pdfs/BBCC2025_abstract_Kafee.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.6H8V13zm0 3.4h8V18H8v-1.6z"/></svg>Abstract</a>
+          </p>
+          <div class="gallery is-single">
+            <figure class="poster-fig">
+              <a href="static/pdfs/BBCC2025_poster_Kafee.pdf" target="_blank" rel="noopener">
+                <img src="static/images/bbcc2025_poster.jpg" width="910" height="1287" loading="lazy" alt="BBCC 2025 poster: Unsupervised brain MRI anomaly detection, revisiting the StRegA pipeline in the era of diffusion-based UAD.">
               </a>
-              <figcaption>ESMRMB 2026 lightning talk, session LTD23. Click to open the slides.</figcaption>
-            </figure>
-            <figure>
-              <img src="static/images/esmrmb2026_maps.jpg" loading="lazy" alt="Two anomaly maps of the same BraTS 2020 slice with the tumour outlined in white: left from raw intensity input, right from tissue-map input.">
-              <figcaption>From the ESMRMB 2026 work: one BraTS 2020 slice, one method (SCRD4AD), two inputs. Anomaly map from raw intensities (left) and from StRegA's FSL FAST tissue map (right). White outline: tumour.</figcaption>
+              <figcaption>BBCC 2025 poster. Click to open the PDF.</figcaption>
             </figure>
           </div>
         </div>
       </article>
+
+      <!-- Stage 2 -->
+      <article class="stage" id="stage-esmrmb">
+        <div class="stage-rail" aria-hidden="true"><span class="stage-num">2</span></div>
+        <div class="stage-body">
+          <p class="when">30 September to 3 October 2026 &middot; Girona &middot; Lightning talk and poster</p>
+          <h3>ESMRMB 2026: a benchmark across training regimes and preprocessing pipelines</h3>
+          <p class="work-title">European Society for Magnetic Resonance in Medicine and Biology. Lightning talk (session LTD23) and poster (PG180): <em>Benchmarking unsupervised anomaly detection in brain MRI: a systematic comparison across training regimes and preprocessing pipelines</em>.</p>
+          <div class="qa">
+            <p class="q">The question</p>
+            <p>How much do contrast matching, multi-site pooling and tissue-segmentation preprocessing matter, compared with the design of the model?</p>
+          </div>
+          <p>Five methods (StRegA, SCRD4AD, MAD-AD, cDDPM and UCCD) were each trained on healthy scans from IXI and MOOD in ten matched configurations, covering single-site, mixed-field-strength and joint T1 and T2 regimes, and tested on BraTS. StRegA's FSL FAST preprocessing was also transferred to the four other methods on three representative configurations.</p>
+          <div class="result-grid">
+            <div class="result"><p class="r-head">Contrast matching came first</p><p>Models trained on T2 and tested on BraTS T2 beat their T1 counterparts for every method. Mean slice AUROC, T1 against T2: StRegA 0.73 and 0.84, cDDPM 0.81 and 0.85, UCCD 0.81 and 0.88.</p></div>
+            <div class="result"><p class="r-head">Conditioned diffusion led</p><p>UCCD reached slice AUROC 0.883 and large-tumour Dice 0.706 (IXI 1.5&nbsp;T to BraTS T2); cDDPM reached 0.865 and 0.768 (IXI 3&nbsp;T plus 1.5&nbsp;T to BraTS T2).</p></div>
+            <div class="result"><p class="r-head">More data did not always help</p><p>Pooling sites helped cDDPM but hurt MAD-AD (AUROC 0.794, 0.728, then 0.668 on T1) and SCRD4AD (0.721 to 0.590).</p></div>
+            <div class="result"><p class="r-head">Preprocessing interacted with architecture</p><p>FAST input raised SCRD4AD's slice Dice from 0.348 to 0.754 and its small-tumour Dice from near zero to 0.265, the only non-trivial small-lesion result in the benchmark, whereas cDDPM fell from 0.531 to 0.184 and UCCD dropped to zero on its strongest configuration.</p></div>
+          </div>
+          <p>The abstract concluded that upstream choices shifted model rankings more than architecture did, and argued for reporting UAD performance across a matrix of conditions instead of a single configuration. That sentence is where MIRTO starts.</p>
+          <p class="aside-note">These numbers come from the benchmark's own evaluation pipeline. The preprint re-scores every map on one canonical reference with gated geometry and validation-only thresholds, so the two sets of numbers are not directly comparable.</p>
+          <p class="doc-links">
+            <a href="static/pdfs/ESMRMB2026_lightning_talk_Kafee.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.6H8V13zm0 3.4h8V18H8v-1.6z"/></svg>Talk slides</a>
+            <a href="static/pdfs/ESMRMB2026_poster_Kafee.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.6H8V13zm0 3.4h8V18H8v-1.6z"/></svg>Poster</a>
+            <a href="static/pdfs/ESMRMB2026_abstract_Kafee.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.6H8V13zm0 3.4h8V18H8v-1.6z"/></svg>Abstract</a>
+          </p>
+          <div class="gallery">
+            <figure class="poster-fig">
+              <a href="static/pdfs/ESMRMB2026_poster_Kafee.pdf" target="_blank" rel="noopener">
+                <img src="static/images/esmrmb2026_poster.jpg" width="1100" height="1650" loading="lazy" alt="ESMRMB 2026 poster PG180: Benchmarking unsupervised anomaly detection in brain MRI.">
+              </a>
+              <figcaption>ESMRMB 2026 poster PG180. Click to open the PDF.</figcaption>
+            </figure>
+            <div class="stack">
+              <figure>
+                <a href="static/pdfs/ESMRMB2026_lightning_talk_Kafee.pdf" target="_blank" rel="noopener">
+                  <img src="static/images/esmrmb2026_talk.jpg" width="1400" height="787" loading="lazy" alt="Title slide of the ESMRMB 2026 lightning talk, showing a T2 slice, its tissue map and an anomaly map stacked in layers.">
+                </a>
+                <figcaption>ESMRMB 2026 lightning talk, session LTD23. Click to open the slides.</figcaption>
+              </figure>
+              <figure>
+                <img src="static/images/esmrmb2026_maps.jpg" width="1304" height="640" loading="lazy" alt="Two anomaly maps of the same BraTS 2020 slice with the tumour outlined in white: left from raw intensity input, right from tissue-map input.">
+                <figcaption>One BraTS 2020 slice, one method (SCRD4AD), two inputs: anomaly map from raw intensities (left) and from StRegA's FSL FAST tissue map (right). White outline: tumour.</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Stage 3 -->
+      <article class="stage is-current" id="stage-mirto">
+        <div class="stage-rail" aria-hidden="true"><span class="stage-num">3</span></div>
+        <div class="stage-body">
+          <p class="when">October 2026 &middot; arXiv:2610.02136 &middot; Preprint</p>
+          <h3>MIRTO: auditing the evaluation itself</h3>
+          <div class="qa">
+            <p class="q">The question</p>
+            <p>How much of a UAD leaderboard is decided by the evaluation rather than by the model? And can a protocol make that dependence visible, catch the errors it hides, and still say something definite about the models?</p>
+          </div>
+          <p>The benchmark's conclusion became a hypothesis to test. The preprint holds the training data fixed (IXI T2 from Hammersmith Hospital at 3&nbsp;T and Guy's Hospital at 1.5&nbsp;T, the same for every method), scores four current UAD families and two model-free intensity baselines on 312 BraTS 2020 test subjects, and treats every evaluation decision as an explicit axis. Along the way it found that the mapping of anomaly maps into a common space, which most papers never mention, can quietly invalidate a comparison. Where possible, each component of the protocol was checked on cases in which the right answer is known: synthetic volumes, injected corruptions and random calibration splits.</p>
+          <p class="doc-links">
+            <a href="https://arxiv.org/abs/2610.02136" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm7 1.5V9h5.5L13 3.5zM8 13h8v1.6H8V13zm0 3.4h8V18H8v-1.6z"/></svg>arXiv page</a>
+            <a href="https://arxiv.org/pdf/2610.02136" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v10.2l3.6-3.6 1.4 1.4-6 6-6-6 1.4-1.4 3.6 3.6V3h2zM5 19h14v2H5v-2z"/></svg>PDF</a>
+            <a href="#protocol"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11h12.2l-5.6-5.6L12 4l8 8-8 8-1.4-1.4 5.6-5.6H4v-2z"/></svg>The protocol, below</a>
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Protocol -->
+  <section class="mirto-section is-tinted" id="protocol">
+    <div class="container is-wide content">
+      <p class="eyebrow">The protocol</p>
+      <h2 class="title">Four components, each tested where the answer is known</h2>
+      <p class="lede">A UAD score is the end of a long chain of decisions taken after training. MIRTO takes the frozen anomaly maps of every method and passes them through four components before any claim is made; the final O, evaluati<b>O</b>n, is the form in which every claim is reported. None of this retrains a model or runs new inference.</p>
+
+      <div class="wordmark" role="list" aria-label="What the letters of MIRTO stand for">
+        <a class="wm-tile" href="#c-M" role="listitem"><span class="wm-letter">M</span><span class="wm-word">Multiverse-tested</span><span class="wm-sub">10 axes · 15,552 pipelines</span></a>
+        <a class="wm-tile" href="#c-I" role="listitem"><span class="wm-letter">I</span><span class="wm-word">Interval-based</span><span class="wm-sub">paired bootstrap · Holm</span></a>
+        <a class="wm-tile" href="#c-R" role="listitem"><span class="wm-letter">R</span><span class="wm-word">Registration-gated</span><span class="wm-sub">one reference · 56 transforms</span></a>
+        <a class="wm-tile" href="#c-T" role="listitem"><span class="wm-letter">T</span><span class="wm-word">Threshold-transfer-aware</span><span class="wm-sub">validation-only τ · realised burden</span></a>
+        <a class="wm-tile is-o" href="#c-O" role="listitem"><span class="wm-letter">O</span><span class="wm-word">evaluati<b>O</b>n</span><span class="wm-sub">an indexed claim</span></a>
+      </div>
+      <p class="wm-note">The letters spell the name, not the order of execution. In practice the geometry gate runs first, thresholds are set next, the multiverse is evaluated over the gated maps, and an interval is attached to every contrast before it is reported.</p>
+
+      <div class="components">
+        <div class="component" id="c-M">
+          <div class="c-head"><span class="letter">M</span><h3>Multiverse-tested</h3></div>
+          <p>Ten axes of evaluation choice (reference, support, voxel volume, threshold protocol, budget, post-processing, lesion definition, hit criterion, aggregation and metric) give 155,520 universes per method, of which 15,552 are defensible. MIRTO reports how often each pair of methods swaps places, by how much each leads, and how much of the variance belongs to the method. The training set is added as an eleventh axis.</p>
+          <p class="caught"><span>Caught</span> The method explains at least 0.95 of the variance in voxel AUROC but only 0.14 in lesion sensitivity.</p>
+        </div>
+        <div class="component" id="c-I">
+          <div class="c-head"><span class="letter">I</span><h3>Interval-based</h3></div>
+          <p>Every contrast carries a paired subject-bootstrap interval (10<sup>4</sup> resamples) with Holm adjustment inside declared families, and is stated for a given budget, aggregation and operating point. Nine hypotheses carry explicit decision criteria, and eight secondary hypotheses predict specific effects.</p>
+          <p class="caught"><span>Caught</span> Unpaired, unadjusted claims: each contrast is tied to the operating point at which it holds.</p>
+        </div>
+        <div class="component" id="c-R">
+          <div class="c-head"><span class="letter">R</span><h3>Registration-gated</h3></div>
+          <p>Every subject has one reference on a 1&nbsp;mm canonical grid, never resampled or cropped per method. Each method's maps are brought onto it by a repaired transform fixed before scoring, and a gate checks the result: centroid error within 3&nbsp;mm, the applied transform the best of 56 candidates, and an overlap floor of 0.85. Five label-free diagnostics flag errors that slip through.</p>
+          <p class="caught"><span>Caught</span> An axis-order mismatch that left cDDPM's voxel AUROC at 0.583 instead of 0.873, whilst slice-level AUROC moved by only 0.112.</p>
+        </div>
+        <div class="component" id="c-T">
+          <div class="c-head"><span class="letter">T</span><h3>Threshold-transfer-aware</h3></div>
+          <p>Thresholds are chosen on 24 validation subjects alone, for a nominal false-positive budget of 5, 10, 20 or 40&nbsp;cm³. The protocol then reports the burden actually realised on test (mean, median, 95th percentile and the share of subjects above budget), the threshold-transfer gap, contrasts at equal realised burden, and a conformal per-scan guarantee.</p>
+          <p class="caught"><span>Caught</span> A UCCD advantage over cDDPM of +0.020 Dice at validation thresholds that became −0.001 at equal realised burden.</p>
+        </div>
+        <div class="component is-o" id="c-O">
+          <div class="c-head"><span class="letter">O</span><h3>evaluati<b>O</b>n: the indexed claim</h3></div>
+          <p>What comes out is not a leaderboard but a set of indexed claims. Every claim names its geometry, threshold rule, budget, metric, aggregation and training data, and carries its paired interval, the false-positive burden actually realised and the share of defensible universes in which it holds.</p>
+          <p class="caught"><span>Example</span> REFLECT has the highest voxel AUROC (0.932 against 0.865 to 0.873 for the diffusion models) in every universe and with every training set.</p>
+        </div>
+      </div>
+
+      <p>Exact identities accompany the metrics. They split a contrast at validation thresholds into a map term and a transfer term, split a post-processing gain at equal burden into a fixed-threshold effect and a threshold relaxation, and decompose pooled Dice and pooled AUROC so that disagreements between subject-level and pooled rankings can be explained rather than merely observed. A known result on split-conformal calibration states, from the calibration size alone, how often a small calibration set will miss its target.</p>
+
+      <details class="paper-fig">
+        <summary>Figure 1 of the paper: the protocol in full</summary>
+        <figure>
+          <img src="static/images/paper/fig1_mirto_overview.png" width="2000" height="1095" loading="lazy" alt="Figure 1 of the MIRTO paper: the four components R, T, M and I with the metrics and exact identities, and for each a failure it caught in this study.">
+          <figcaption><strong>The MIRTO protocol.</strong> Frozen anomaly maps from every method enter four components. Dashed boxes give, for each component, a failure it caught in this study.</figcaption>
+        </figure>
+      </details>
+    </div>
+  </section>
+
+  <!-- Findings -->
+  <section class="mirto-section" id="findings">
+    <div class="container is-wide content">
+      <p class="eyebrow">Findings</p>
+      <h2 class="title">What the protocol showed</h2>
+      <p class="lede">All four methods (REFLECT, UCCD, cDDPM and AnomalyDINO) were trained on the same healthy data and scored on the same 312 test subjects. Intervals are 95% paired subject-bootstrap intervals.</p>
+
+      <!-- F1 -->
+      <article class="finding" id="f-registration">
+        <div class="f-text">
+          <p class="f-num">01 &middot; Registration</p>
+          <h3>A geometric error that standard metrics miss</h3>
+          <p>Each method stores its maps in its own axis order, crop and resolution, so any comparison has to undo those steps. Reading cDDPM's stored maps in the wrong axis order, and ignoring their crop, gave a voxel AUROC of 0.583; the correct mapping gave 0.873. Slice-level AUROC, a widely reported detection score, barely noticed, because a slice that contains tumour still contains it after any in-plane permutation.</p>
+          <p>Under the wrong mapping, 24% of cDDPM test subjects were anti-located (per-subject voxel AUROC below 0.5). Two further errors of the same kind occurred with REFLECT. Each produced a plausible table. On correct pipelines the gate passed 1,342 of 1,344 method and subject pairs, and two label-free diagnostics detected every injected in-plane flip and transpose with power 1.000 at a false-alarm rate of 0.05, already with 30 subjects.</p>
+        </div>
+        <figure class="f-visual">
+          <p class="chart-title">Change when the mapping error was corrected (cDDPM)</p>
+<svg class="dg" viewBox="0 0 560 232" role="img" aria-label="Change in each metric for cDDPM when the axis-order mapping error was corrected" xmlns="http://www.w3.org/2000/svg"><line x1="136" y1="12" x2="136" y2="204" stroke="#e3dfd6" stroke-width="1"/><text x="136" y="222" font-size="11" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >0</text><line x1="256.0" y1="12" x2="256.0" y2="204" stroke="#e3dfd6" stroke-width="1"/><text x="256.0" y="222" font-size="11" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >+0.2</text><line x1="376.0" y1="12" x2="376.0" y2="204" stroke="#e3dfd6" stroke-width="1"/><text x="376.0" y="222" font-size="11" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >+0.4</text><line x1="496.0" y1="12" x2="496.0" y2="204" stroke="#e3dfd6" stroke-width="1"/><text x="496.0" y="222" font-size="11" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >+0.6</text><text x="126" y="41" font-size="13" fill="#16212c" text-anchor="end" font-weight="500" font-family="Inter, system-ui, sans-serif" >voxel AUPRC</text><rect x="136" y="24" width="321.0" height="22" rx="2" fill="#16212c"/><line x1="446.2" y1="35" x2="467.8" y2="35" stroke="#aab4be" stroke-width="2"/><text x="475.8" y="40" font-size="13" fill="#46525e" text-anchor="start" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" >+0.535</text><text x="126" y="89" font-size="13" fill="#16212c" text-anchor="end" font-weight="500" font-family="Inter, system-ui, sans-serif" >Dice at 20 cm³</text><rect x="136" y="72" width="312.0" height="22" rx="2" fill="#16212c"/><line x1="438.4" y1="83" x2="458.2" y2="83" stroke="#aab4be" stroke-width="2"/><text x="466.20000000000005" y="88" font-size="13" fill="#46525e" text-anchor="start" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" >+0.520</text><text x="126" y="137" font-size="13" fill="#16212c" text-anchor="end" font-weight="500" font-family="Inter, system-ui, sans-serif" >voxel AUROC</text><rect x="136" y="120" width="174.0" height="22" rx="2" fill="#16212c"/><line x1="302.2" y1="131" x2="317.2" y2="131" stroke="#aab4be" stroke-width="2"/><text x="325.2" y="136" font-size="13" fill="#46525e" text-anchor="start" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" >+0.290</text><text x="126" y="185" font-size="13" fill="#7a3a6b" text-anchor="end" font-weight="600" font-family="Inter, system-ui, sans-serif" >slice-max AUROC</text><rect x="136" y="168" width="67.2" height="22" rx="2" fill="#7a3a6b"/><line x1="195.4" y1="179" x2="211.0" y2="179" stroke="#aab4be" stroke-width="2"/><text x="219.0" y="184" font-size="13" fill="#46525e" text-anchor="start" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" >+0.112</text></svg>
+          <figcaption>Paired change with 95% interval (grey line). Slice-max AUROC, in purple, is nearly blind to the error that matters most for segmentation.</figcaption>
+        </figure>
+        <figure class="f-wide">
+          <img src="static/images/paper/fig_registration_corruptions.png" width="1800" height="553" loading="lazy" alt="Change in Dice, voxel AUROC and slice-level AUROC for UCCD and AnomalyDINO under seven injected corruptions.">
+          <figcaption><strong>Injected corruptions of two verified pipelines</strong> (from the paper). In-plane flips and the transpose cost UCCD 0.34 to 0.50 Dice yet changed its slice-max AUROC by at most +0.012. An antero-posterior flip even <em>raised</em> AnomalyDINO's slice-max AUROC by 0.181.</figcaption>
+        </figure>
+      </article>
+
+      <!-- F2 -->
+      <article class="finding" id="f-multiverse">
+        <div class="f-text">
+          <p class="f-num">02 &middot; Multiverse</p>
+          <h3>Some rankings belong to the method, others to the evaluation</h3>
+          <p>Voxel AUROC gave one order in every universe: REFLECT, then cDDPM, UCCD and AnomalyDINO. Dice did not. The method still explained 0.77 of its variance, but most of that is AnomalyDINO's deficit; amongst the other three, every pair swapped places in 36% to 49% of Dice universes, Dice produced six different orders, and each of REFLECT, UCCD and cDDPM ranked first in between 26% and 39% of them. Lesion sensitivity was governed by the evaluation, with the lesion definition and the hit criterion carrying most of the variance.</p>
+          <p>A flip share near one half is also what two indistinguishable methods produce, so MIRTO reads every flip share alongside the size of the difference. REFLECT and UCCD were within 0.02 Dice of each other in only 26.9% of Dice universes: each leads by several points in a large share of defensible evaluations, and the evaluation decides which.</p>
+        </div>
+        <figure class="f-visual">
+          <p class="chart-title">Share of variance across defensible universes, within each metric</p>
+<svg class="dg" viewBox="0 0 560 368" role="img" aria-label="Share of variance explained by the method and by the evaluation axes, within each metric" xmlns="http://www.w3.org/2000/svg"><line x1="140" y1="22" x2="140" y2="316" stroke="#e3dfd6" stroke-width="1"/><text x="140" y="16" font-size="11" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >0</text><line x1="310.0" y1="22" x2="310.0" y2="316" stroke="#e3dfd6" stroke-width="1"/><text x="310.0" y="16" font-size="11" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >0.5</text><line x1="480" y1="22" x2="480" y2="316" stroke="#e3dfd6" stroke-width="1"/><text x="480" y="16" font-size="11" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >1</text><text x="130" y="54" font-size="13" fill="#16212c" text-anchor="end" font-weight="500" font-family="Inter, system-ui, sans-serif" >voxel AUROC</text><rect x="140" y="34" width="324.4" height="14" rx="2" fill="#16212c"/><line x1="457.2" y1="41" x2="468.4" y2="41" stroke="#aab4be" stroke-width="1.6"/><text x="476.44" y="46" font-size="12" fill="#46525e" text-anchor="start" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" >0.954</text><rect x="140" y="52" width="15.6" height="14" rx="2" fill="#2a7f8a"/><line x1="151.2" y1="59" x2="162.8" y2="59" stroke="#aab4be" stroke-width="1.6"/><text x="170.78" y="64" font-size="12" fill="#46525e" text-anchor="start" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" >0.046</text><text x="130" y="102" font-size="13" fill="#16212c" text-anchor="end" font-weight="500" font-family="Inter, system-ui, sans-serif" >voxel AUPRC</text><rect x="140" y="82" width="326.4" height="14" rx="2" fill="#16212c"/><line x1="459.9" y1="89" x2="470.5" y2="89" stroke="#aab4be" stroke-width="1.6"/><text x="478.48" y="94" font-size="12" fill="#46525e" text-anchor="start" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" >0.960</text><rect x="140" y="100" width="13.6" height="14" rx="2" fill="#2a7f8a"/><line x1="149.5" y1="107" x2="160.1" y2="107" stroke="#aab4be" stroke-width="1.6"/><text x="168.06" y="112" font-size="12" fill="#46525e" text-anchor="start" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" >0.040</text><text x="130" y="150" font-size="13" fill="#16212c" text-anchor="end" font-weight="500" font-family="Inter, system-ui, sans-serif" >slice AUROC, marg.</text><rect x="140" y="130" width="331.2" height="14" rx="2" fill="#16212c"/><line x1="467.8" y1="137" x2="473.2" y2="137" stroke="#aab4be" stroke-width="1.6"/><text x="481.2" y="142" font-size="12" fill="#46525e" text-anchor="start" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" >0.974</text><rect x="140" y="148" width="8.5" height="14" rx="2" fill="#2a7f8a"/><line x1="146.5" y1="155" x2="152.2" y2="155" stroke="#aab4be" stroke-width="1.6"/><text x="160.24" y="160" font-size="12" fill="#46525e" text-anchor="start" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" >0.025</text><text x="130" y="198" font-size="13" fill="#16212c" text-anchor="end" font-weight="500" font-family="Inter, system-ui, sans-serif" >Dice</text><rect x="140" y="178" width="261.8" height="14" rx="2" fill="#16212c"/><line x1="390.9" y1="185" x2="407.6" y2="185" stroke="#aab4be" stroke-width="1.6"/><text x="415.58" y="190" font-size="12" fill="#46525e" text-anchor="start" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" >0.770</text><rect x="140" y="196" width="70.4" height="14" rx="2" fill="#2a7f8a"/><line x1="204.6" y1="203" x2="219.6" y2="203" stroke="#aab4be" stroke-width="1.6"/><text x="227.56" y="208" font-size="12" fill="#46525e" text-anchor="start" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" >0.207</text><text x="130" y="246" font-size="13" fill="#16212c" text-anchor="end" font-weight="500" font-family="Inter, system-ui, sans-serif" >slice AROC, adj.</text><rect x="140" y="226" width="244.1" height="14" rx="2" fill="#16212c"/><line x1="353.2" y1="233" x2="406.2" y2="233" stroke="#aab4be" stroke-width="1.6"/><text x="414.22" y="238" font-size="12" fill="#46525e" text-anchor="start" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" >0.718</text><rect x="140" y="244" width="90.8" height="14" rx="2" fill="#2a7f8a"/><line x1="210.4" y1="251" x2="260.7" y2="251" stroke="#aab4be" stroke-width="1.6"/><text x="268.7" y="256" font-size="12" fill="#46525e" text-anchor="start" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" >0.267</text><text x="130" y="294" font-size="13" fill="#16212c" text-anchor="end" font-weight="500" font-family="Inter, system-ui, sans-serif" >lesion sensitivity</text><rect x="140" y="274" width="47.3" height="14" rx="2" fill="#16212c"/><line x1="183.2" y1="281" x2="191.7" y2="281" stroke="#aab4be" stroke-width="1.6"/><text x="199.68" y="286" font-size="12" fill="#46525e" text-anchor="start" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" >0.139</text><rect x="140" y="292" width="223.4" height="14" rx="2" fill="#2a7f8a"/><line x1="360.3" y1="299" x2="366.4" y2="299" stroke="#aab4be" stroke-width="1.6"/><text x="374.44000000000005" y="304" font-size="12" fill="#46525e" text-anchor="start" font-weight="500" font-family="'Geist Mono', ui-monospace, monospace" >0.657</text><line x1="8" y1="332" x2="552" y2="332" stroke="rgba(22,33,44,0.10)" stroke-width="0.8"/><rect x="16" y="343" width="16" height="12" rx="2" fill="#16212c"/><text x="40" y="354" font-size="13" fill="#46525e" text-anchor="start" font-weight="400" font-family="Inter, system-ui, sans-serif" >method</text><rect x="120" y="343" width="16" height="12" rx="2" fill="#2a7f8a"/><text x="144" y="354" font-size="13" fill="#46525e" text-anchor="start" font-weight="400" font-family="Inter, system-ui, sans-serif" >evaluation axes, incl. their interaction with method</text></svg>
+          <figcaption>Sum-of-squares shares with 95% bootstrap intervals (from the paper). Pooled over all six metrics the evaluation axes explain 0.614 and the method 0.162, but 0.539 of that is the metric axis itself, which mostly reflects the different scales of the metrics.</figcaption>
+        </figure>
+        <figure class="f-wide is-narrow">
+          <img src="static/images/paper/fig_multiverse_spec_curves.png" width="1500" height="1110" loading="lazy" alt="Specification curves for six metrics across 2,592 defensible universes each, ordered by REFLECT's score.">
+          <figcaption><strong>Specification curves</strong> (from the paper). Each column is a defensible universe, 2,592 per metric, ordered by REFLECT's score. Dice and lesion sensitivity reorder the three leading models from universe to universe; voxel AUROC does not.</figcaption>
+        </figure>
+      </article>
+
+      <!-- F3 -->
+      <article class="finding" id="f-threshold">
+        <div class="f-text">
+          <p class="f-num">03 &middot; Thresholds</p>
+          <h3>A nominal budget is not an operating point</h3>
+          <p>A threshold chosen on validation data to allow 20&nbsp;cm³ of false positives does not deliver 20&nbsp;cm³ on test. The mean realised burden ranged from 12.9 to 18.9&nbsp;cm³, the median from 3.0 to 10.1, the 95th percentile from 37 to 64, and between 15.7% and 29.8% of subjects exceeded the budget. The mean describes no typical subject; a minority with very large false-positive volumes pulls it up.</p>
+          <p>The consequence for a ranking is direct. At validation thresholds UCCD beat cDDPM at every budget. Held to the same realised burden, the difference vanished at every budget. An exact identity accounts for the change: the shift between the two contrasts equals cDDPM's threshold-transfer gap minus UCCD's, 0.023 − 0.002 = 0.021, against an observed 0.021. The advantage belonged to how UCCD's threshold transferred, not to its map.</p>
+        </div>
+        <div class="f-stack">
+          <figure class="f-visual">
+            <p class="chart-title">Realised false-positive volume at a nominal 20&nbsp;cm³</p>
+<svg class="dg" viewBox="0 0 560 292" role="img" aria-label="Realised false-positive volume on test at a nominal budget of 20 cubic centimetres" xmlns="http://www.w3.org/2000/svg"><line x1="104.0" y1="34" x2="104.0" y2="216" stroke="#e3dfd6" stroke-width="1"/><text x="104.0" y="234" font-size="11" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >0</text><line x1="156.0" y1="34" x2="156.0" y2="216" stroke="#e3dfd6" stroke-width="1"/><text x="156.0" y="234" font-size="11" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >10</text><line x1="208.0" y1="34" x2="208.0" y2="216" stroke="#e3dfd6" stroke-width="1"/><text x="208.0" y="234" font-size="11" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >20</text><line x1="260.0" y1="34" x2="260.0" y2="216" stroke="#e3dfd6" stroke-width="1"/><text x="260.0" y="234" font-size="11" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >30</text><line x1="312.0" y1="34" x2="312.0" y2="216" stroke="#e3dfd6" stroke-width="1"/><text x="312.0" y="234" font-size="11" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >40</text><line x1="364.0" y1="34" x2="364.0" y2="216" stroke="#e3dfd6" stroke-width="1"/><text x="364.0" y="234" font-size="11" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >50</text><line x1="416.0" y1="34" x2="416.0" y2="216" stroke="#e3dfd6" stroke-width="1"/><text x="416.0" y="234" font-size="11" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >60</text><line x1="468.0" y1="34" x2="468.0" y2="216" stroke="#e3dfd6" stroke-width="1"/><text x="468.0" y="234" font-size="11" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >70</text><text x="286.0" y="252" font-size="12" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="Inter, system-ui, sans-serif" >false-positive volume per test subject (cm³)</text><line x1="208.0" y1="22" x2="208.0" y2="216" stroke="#7a3a6b" stroke-width="1.4" stroke-dasharray="5,4"/><text x="208.0" y="18" font-size="10" fill="#7a3a6b" text-anchor="middle" font-weight="600" font-family="'Geist Mono', ui-monospace, monospace" letter-spacing="0.06em">NOMINAL 20</text><text x="548" y="18" font-size="10" fill="#6b7682" text-anchor="end" font-weight="600" font-family="'Geist Mono', ui-monospace, monospace" >&gt; 20 cm³</text><text x="92" y="67" font-size="13" fill="#16212c" text-anchor="end" font-weight="600" font-family="Inter, system-ui, sans-serif" >REFLECT</text><line x1="148.7" y1="62" x2="297.4" y2="62" stroke="#0072B2" stroke-width="4" stroke-linecap="round" opacity="0.45"/><line x1="297.4" y1="54" x2="297.4" y2="70" stroke="#0072B2" stroke-width="2"/><circle cx="148.7" cy="62" r="5.5" fill="#ffffff" stroke="#0072B2" stroke-width="2"/><circle cx="188.8" cy="62" r="6" fill="#0072B2"/><text x="548" y="67" font-size="13" fill="#16212c" text-anchor="end" font-weight="600" font-family="'Geist Mono', ui-monospace, monospace" >15.7%</text><text x="92" y="111" font-size="13" fill="#16212c" text-anchor="end" font-weight="600" font-family="Inter, system-ui, sans-serif" >UCCD</text><line x1="150.3" y1="106" x2="436.8" y2="106" stroke="#E69F00" stroke-width="4" stroke-linecap="round" opacity="0.45"/><line x1="436.8" y1="98" x2="436.8" y2="114" stroke="#E69F00" stroke-width="2"/><circle cx="150.3" cy="106" r="5.5" fill="#ffffff" stroke="#E69F00" stroke-width="2"/><circle cx="202.3" cy="106" r="6" fill="#E69F00"/><text x="548" y="111" font-size="13" fill="#16212c" text-anchor="end" font-weight="600" font-family="'Geist Mono', ui-monospace, monospace" >29.8%</text><text x="92" y="155" font-size="13" fill="#16212c" text-anchor="end" font-weight="600" font-family="Inter, system-ui, sans-serif" >cDDPM</text><line x1="119.6" y1="150" x2="400.9" y2="150" stroke="#009E73" stroke-width="4" stroke-linecap="round" opacity="0.45"/><line x1="400.9" y1="142" x2="400.9" y2="158" stroke="#009E73" stroke-width="2"/><circle cx="119.6" cy="150" r="5.5" fill="#ffffff" stroke="#009E73" stroke-width="2"/><circle cx="171.1" cy="150" r="6" fill="#009E73"/><text x="548" y="155" font-size="13" fill="#16212c" text-anchor="end" font-weight="600" font-family="'Geist Mono', ui-monospace, monospace" >21.5%</text><text x="92" y="199" font-size="13" fill="#16212c" text-anchor="end" font-weight="600" font-family="Inter, system-ui, sans-serif" >AnomalyDINO</text><line x1="156.5" y1="194" x2="416.5" y2="194" stroke="#CC79A7" stroke-width="4" stroke-linecap="round" opacity="0.45"/><line x1="416.5" y1="186" x2="416.5" y2="202" stroke="#CC79A7" stroke-width="2"/><circle cx="156.5" cy="194" r="5.5" fill="#ffffff" stroke="#CC79A7" stroke-width="2"/><circle cx="195.0" cy="194" r="6" fill="#CC79A7"/><text x="548" y="199" font-size="13" fill="#16212c" text-anchor="end" font-weight="600" font-family="'Geist Mono', ui-monospace, monospace" >27.2%</text><circle cx="110" cy="279" r="5.5" fill="#ffffff" stroke="#46525e" stroke-width="2"/><text x="122" y="284" font-size="12" fill="#46525e" text-anchor="start" font-weight="400" font-family="Inter, system-ui, sans-serif" >median</text><circle cx="196" cy="279" r="6" fill="#46525e"/><text x="208" y="284" font-size="12" fill="#46525e" text-anchor="start" font-weight="400" font-family="Inter, system-ui, sans-serif" >mean</text><line x1="270" y1="271" x2="270" y2="287" stroke="#46525e" stroke-width="2"/><text x="280" y="284" font-size="12" fill="#46525e" text-anchor="start" font-weight="400" font-family="Inter, system-ui, sans-serif" >95th percentile</text></svg>
+            <figcaption>Per-subject distribution on the 312 test subjects (from the paper). The bar runs from the median to the 95th percentile; the maxima were 210 to 604&nbsp;cm³. Right: share of subjects above the budget.</figcaption>
+          </figure>
+          <figure class="f-visual">
+            <p class="chart-title">The same two models at two operating points</p>
+<svg class="dg" viewBox="0 0 560 164" role="img" aria-label="UCCD minus cDDPM Dice at validation thresholds and at equal realised burden" xmlns="http://www.w3.org/2000/svg"><line x1="164.0" y1="16" x2="164.0" y2="120" stroke="#e3dfd6" stroke-width="1"/><text x="164.0" y="138" font-size="11" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >-0.02</text><line x1="219.2" y1="16" x2="219.2" y2="120" stroke="#e3dfd6" stroke-width="1"/><text x="219.2" y="138" font-size="11" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >-0.01</text><line x1="274.4" y1="16" x2="274.4" y2="120" stroke="#16212c" stroke-width="1"/><text x="274.4" y="138" font-size="11" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >0</text><line x1="329.6" y1="16" x2="329.6" y2="120" stroke="#e3dfd6" stroke-width="1"/><text x="329.6" y="138" font-size="11" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >+0.01</text><line x1="384.8" y1="16" x2="384.8" y2="120" stroke="#e3dfd6" stroke-width="1"/><text x="384.8" y="138" font-size="11" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >+0.02</text><line x1="440.0" y1="16" x2="440.0" y2="120" stroke="#e3dfd6" stroke-width="1"/><text x="440.0" y="138" font-size="11" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="'Geist Mono', ui-monospace, monospace" >+0.03</text><text x="302.0" y="158" font-size="12" fill="#6b7682" text-anchor="middle" font-weight="400" font-family="Inter, system-ui, sans-serif" >UCCD − cDDPM, mean Dice at 20 cm³</text><text x="152" y="47" font-size="13" fill="#16212c" text-anchor="end" font-weight="500" font-family="Inter, system-ui, sans-serif" >validation thresholds</text><line x1="335.1" y1="42" x2="434.5" y2="42" stroke="#16212c" stroke-width="2"/><line x1="335.1" y1="36" x2="335.1" y2="48" stroke="#16212c" stroke-width="2"/><line x1="434.5" y1="36" x2="434.5" y2="48" stroke="#16212c" stroke-width="2"/><circle cx="384.8" cy="42" r="6.5" fill="#16212c"/><text x="548" y="41" font-size="13" fill="#16212c" text-anchor="end" font-weight="600" font-family="'Geist Mono', ui-monospace, monospace" >+0.020</text><text x="548" y="57" font-size="11" fill="#6b7682" text-anchor="end" font-family="'Geist Mono', ui-monospace, monospace">p<tspan font-size="8" dy="2">H</tspan><tspan dy="-2"> &lt; 0.005</tspan></text><text x="152" y="99" font-size="13" fill="#16212c" text-anchor="end" font-weight="500" font-family="Inter, system-ui, sans-serif" >equal realised burden</text><line x1="208.2" y1="94" x2="324.1" y2="94" stroke="#7a3a6b" stroke-width="2"/><line x1="208.2" y1="88" x2="208.2" y2="100" stroke="#7a3a6b" stroke-width="2"/><line x1="324.1" y1="88" x2="324.1" y2="100" stroke="#7a3a6b" stroke-width="2"/><circle cx="268.9" cy="94" r="6.5" fill="#7a3a6b"/><text x="548" y="93" font-size="13" fill="#7a3a6b" text-anchor="end" font-weight="600" font-family="'Geist Mono', ui-monospace, monospace" >-0.001</text><text x="548" y="109" font-size="11" fill="#6b7682" text-anchor="end" font-family="'Geist Mono', ui-monospace, monospace">p<tspan font-size="8" dy="2">H</tspan><tspan dy="-2"> = 1.00</tspan></text></svg>
+            <figcaption>Difference with 95% interval. <em>p</em><sub>H</sub>: Holm-adjusted <em>p</em>-value within the declared family of contrasts.</figcaption>
+          </figure>
+        </div>
+        <p class="f-after">The same accounting applies to post-processing. Hysteresis with persistence pruning raised UCCD's Dice at equal burden by 0.085 at 20&nbsp;cm³, but 0.078 of that came from the burden it freed for the plain threshold, and only 0.006 (interval including zero) from the step itself. For REFLECT the step alone lowered Dice. Conformal risk control at α = 0.10 kept the share of scans above budget at 0.032 to 0.096, against 0.157 to 0.298 with validation thresholds, at a cost of 0.053 to 0.116 Dice; with 24 calibration subjects the guarantee holds on average but fails for roughly three calibration sets in ten, as the exact Beta law of split-conformal calibration predicts.</p>
+        <details class="paper-fig">
+          <summary>Paper figure: every paired Dice contrast, at both operating points</summary>
+          <figure>
+            <img src="static/images/paper/fig_threshold_pairs.png" width="1800" height="869" loading="lazy" alt="Paired Dice contrasts between REFLECT, UCCD and cDDPM by budget and aggregation, at the validation threshold and at equal realised false-positive burden.">
+            <figcaption><strong>Paired Dice contrasts between the three leading models</strong> (from the paper) at the validation threshold (black) and at equal realised burden (orange), by budget and aggregation. Filled markers: Holm-adjusted <em>p</em> &lt; 0.05.</figcaption>
+          </figure>
+        </details>
+      </article>
+
+      <!-- F4 -->
+      <article class="finding" id="f-detection">
+        <div class="f-text">
+          <p class="f-num">04 &middot; Detection</p>
+          <h3>Large lesions found, small ones missed, and a sensitivity that depends on its denominator</h3>
+          <p>At validation thresholds the three leading models found 91.5% to 99.7% of large lesions and 3.6% to 7.3% of small ones: at most 12 of 165. They missed largely the same lesions, and lesion volume separated hits from misses almost completely. Most misses still carried evidence above the subject's healthy-brain median that the threshold did not select.</p>
+          <p>The lesion definition alone rescaled pooled sensitivity about elevenfold. REFLECT hit 287 lesions under both definitions: 287 of 472 with a 50&nbsp;mm³ floor, 287 of 5,473 without. A lesion-level metric is uninterpretable without its connectivity and floor.</p>
+          <p>Slice-level AUROC needs similar care. A scorer that knows only how much brain a slice contains reached 0.884, within 0.025 of every leading model. Replacing each subject's slice scores with those of the 50 subjects of most similar brain area lowered every model's AROC, by 0.124 to 0.271, so every model did carry subject-specific information.</p>
+        </div>
+        <figure class="f-visual">
+          <img src="static/images/paper/fig_detection_volume_contrast.png" width="1500" height="378" loading="lazy" alt="Detected and missed lesions by standardised log volume and T2 contrast for each model.">
+          <figcaption><strong>Detected (coloured) and missed (grey) lesions</strong> at 20&nbsp;cm³ by standardised log volume and T2 contrast (from the paper): volume separates them almost completely.</figcaption>
+        </figure>
+      </article>
+
+      <!-- F5 -->
+      <article class="finding" id="f-training">
+        <div class="f-text">
+          <p class="f-num">05 &middot; Training data</p>
+          <h3>Change the training set for everyone, and a significant contrast reverses</h3>
+          <p>With the evaluation held fixed, REFLECT minus UCCD Dice was −0.042 [−0.060, −0.025] when all four methods were trained on IXI-HH+Guys and +0.100 [0.079, 0.121] when all were trained on MOOD+IXI. The MOOD+IXI comparison adds T1 data for every method, so the IXI-HH+Guys comparison is the clean one. Choosing a training set per method from the 24 validation subjects was itself unstable: the primary rule chose IXI-HH+Guys for REFLECT in only 36.8% of 10<sup>4</sup> bootstrap resamples.</p>
+        </div>
+        <figure class="f-visual">
+          <img src="static/images/paper/fig_training_sets.png" width="1200" height="677" loading="lazy" alt="Dice, voxel AUPRC and lesion sensitivity for each method under five shared training sets and a test-selected set.">
+          <figcaption><strong>The same evaluation, five shared training sets</strong> (from the paper), plus the test-selected set in which each method used its best training set on test.</figcaption>
+        </figure>
+      </article>
+
+      <!-- F6 -->
+      <article class="finding" id="f-reflect">
+        <div class="f-text">
+          <p class="f-num">06 &middot; A method-level gain</p>
+          <h3>A training-free change to REFLECT</h3>
+          <p>REFLECT's four latent channels need not agree on where an anomaly lies, and its published map averages them. Aggregating the channels by their disagreement, here the median absolute deviation, raised Dice at equal burden by +0.052 [0.045, 0.058] for REFLECT trained on IXI-HH+Guys and by +0.038 [0.033, 0.043] for an independently trained REFLECT on MOOD+IXI. Every latent aggregation improved on the published map in both models, and scoring with the latent stream alone hurt. The specific winner did not replicate across the two models, so the claim is for the family of latent aggregations, not for one rule.</p>
+        </div>
+        <figure class="f-visual">
+          <img src="static/images/paper/fig_reflect_latent_aggregation.png" width="1800" height="683" loading="lazy" alt="Dice difference from REFLECT's published map for nine score rules, in two independently trained REFLECT models.">
+          <figcaption><strong>Latent aggregation for REFLECT</strong> (from the paper). Dice of each score rule minus the published map at 20&nbsp;cm³, matched to the published map's realised burden over the cohort (black) or per subject (blue).</figcaption>
+        </figure>
+      </article>
+    </div>
+  </section>
+
+  <!-- Hypotheses -->
+  <section class="mirto-section is-tinted" id="hypotheses">
+    <div class="container content">
+      <p class="eyebrow">Hypotheses</p>
+      <h2 class="title">Nine hypotheses, nine decision criteria</h2>
+      <p>Each hypothesis was stated with an explicit criterion before its verdict was read. Four were supported, four were not, and one could be tested only in part. Seven of the eight secondary hypotheses held. Because the 312 test subjects also served to develop the protocol, every test is exploratory.</p>
+      <div class="table-wrap">
+        <table class="htable">
+          <thead><tr><th>Hypothesis</th><th>Decision criterion</th><th>Verdict and estimate</th></tr></thead>
+          <tbody>
+            <tr><td><b>H1</b> Ranking instability</td><td>Some pair of methods flips in at least 20% of defensible universes (lower bound)</td><td><span class="v yes">Supported</span> φ<sub>max</sub> = 0.472 [0.414, 0.499]</td></tr>
+            <tr><td><b>H2</b> Evaluation dominance</td><td>Evaluation choices explain more variance than the method, pooled over metrics</td><td><span class="v yes">Supported</span> 0.614 against 0.162, driven by the scale of the metrics</td></tr>
+            <tr><td><b>H3</b> Intensity baseline</td><td>z-scored T2 within 0.05 Dice of at least one model at equal burden</td><td><span class="v no">Not supported</span> closest gap +0.098 [0.076, 0.119]</td></tr>
+            <tr><td><b>H4</b> Contrast dependence</td><td>Detection rises with T2 contrast and oedema fraction in every leading model</td><td><span class="v part">Partly testable</span> not supported</td></tr>
+            <tr><td><b>H5</b> Pruning trade-off</td><td>Pruning helps detection at 5&nbsp;cm³ and hurts it at 40&nbsp;cm³</td><td><span class="v no">Not supported</span> point estimates</td></tr>
+            <tr><td><b>H6</b> Test-tuning optimism</td><td>Test-matched threshold overstates Dice by at least 0.02 at 20&nbsp;cm³ (lower bound)</td><td><span class="v no">Not supported</span> cDDPM +0.0234 [0.0199, 0.0269], REFLECT +0.0203 [0.0191, 0.0216]</td></tr>
+            <tr><td><b>H7</b> Diagnostic power</td><td>Rank stability and anti-location rate detect in-plane errors with power ≥ 0.95 at <i>n</i> = 60</td><td><span class="v yes">Supported</span> power 1.000</td></tr>
+            <tr><td><b>H8</b> Conformal control</td><td>CRC exceedance ≤ α + 0.02 in all 128 combinations</td><td><span class="v yes">Supported</span> none exceeded α</td></tr>
+            <tr><td><b>H9</b> Anatomy adjustment</td><td>Covariate-only matched AROC within 0.50 ± 0.02</td><td><span class="v no">Not supported</span> 0.668 [0.654, 0.682]</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommendations and limitations -->
+  <section class="mirto-section" id="recommendations">
+    <div class="container content">
+      <p class="eyebrow">For authors of UAD methods</p>
+      <h2 class="title">What we suggest reporting</h2>
+      <ol class="checklist">
+        <li>Score every method against one reference on one grid, and report a registration check.</li>
+        <li>Choose thresholds on data that are not the test set, and report the realised false-positive burden as a distribution: median and 95th percentile, not only the mean.</li>
+        <li>Report subject-mean, median and pooled Dice side by side. When two methods swap places across evaluation choices, report by how much each leads.</li>
+        <li>State the lesion definition in full: connectivity, floor and hit criterion.</li>
+        <li>Do not report marginal slice AUROC without an anatomy control.</li>
+        <li>Report paired intervals with a declared multiplicity correction.</li>
+        <li>Train competing methods on the same healthy data, or say plainly that they were not.</li>
+      </ol>
+      <p>The checklist released with the code expands this list.</p>
+
+      <details class="limits">
+        <summary>Limitations, as stated in the paper</summary>
+        <p>The evidence comes from one cohort and one contrast. BraTS 2020 whole-tumour labels are large, conspicuous lesions, so the small-lesion results are a floor, not a characterisation. The 312 test subjects served both to develop the protocol and the choice of training set and to test the hypotheses, so all inference is exploratory. In particular, the common training set was fixed after all twenty combinations of method and training set had been scored on the test cohort; the paper states the rationale for the choice without reference to any score and shows that each evaluation finding holds with every training set. One trained model exists per method and training set, so training-seed variance is unknown. A common training set means the same source data, not the same optimisation budget, and IXI-HH+Guys is not the best training set for every method. The diagnostics were validated on two pipelines. Validation-threshold intervals do not include the uncertainty of fitting a threshold on 24 subjects. The next step is a pre-registered confirmatory evaluation on an untouched cohort.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- BibTeX -->
+  <section class="mirto-section is-tinted" id="bibtex">
+    <div class="container content">
+      <p class="eyebrow">Citation</p>
+      <h2 class="title">BibTeX</h2>
+      <div class="bib">
+        <button class="copy" type="button" data-target="bibcode">Copy</button>
+<pre id="bibcode"><code>@misc{kafeehernashki2026mirto,
+  title         = {{MIRTO}: a registration-gated, multiverse-tested evaluation protocol
+                   for unsupervised anomaly segmentation in brain {MRI}},
+  author        = {Kafee Hernashki, Negin and Chatterjee, Soumick},
+  year          = {2026},
+  eprint        = {2610.02136},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2610.02136}
+}</code></pre>
+      </div>
+      <p class="figcap">The project builds on StRegA: S. Chatterjee, A. Sciarra, M. Dünnwald et al., <em>StRegA: unsupervised anomaly detection in brain MRIs using a compact context-encoding variational autoencoder</em>, Computers in Biology and Medicine 149 (2022) 106093. <a href="https://github.com/soumickmj/StRegA" target="_blank" rel="noopener">Code</a>.</p>
     </div>
   </section>
 
   <!-- Contact -->
-  <section class="mirto-section is-tinted" id="contact">
+  <section class="mirto-section" id="contact">
     <div class="container">
       <p class="eyebrow">Contact</p>
       <h2 class="title">Get in touch</h2>
@@ -290,5 +603,17 @@
   </div>
 </footer>
 
+<script>
+  document.querySelectorAll('button.copy').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var el = document.getElementById(b.dataset.target);
+      if (!el || !navigator.clipboard) return;
+      navigator.clipboard.writeText(el.innerText).then(function () {
+        b.textContent = 'Copied';
+        setTimeout(function () { b.textContent = 'Copy'; }, 1600);
+      });
+    });
+  });
+</script>
 </body>
 </html>
